@@ -13,8 +13,25 @@ function Chatbot() {
 export default Chatbot*/
 
 import React, { useState } from "react";
+import { Button, Navbar, Nav } from 'react-bootstrap';
 
 function Chatbot() {
+    return (
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="#home">Mi Proyecto React</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#home">Inicio</Nav.Link>
+              <Nav.Link href="#link">Enlace</Nav.Link>
+            </Nav>
+            <Button variant="outline-success">Botón</Button>
+          </Navbar.Collapse>
+        </Navbar>
+      );
+}
+export default Chatbot;
+/*function Chatbot() {
   const [messages, setMessages] = useState([
     { user: "Bot", text: "Hola, ¿en qué puedo ayudarte?" },
   ]);
@@ -51,3 +68,4 @@ function Chatbot() {
 }
 
 export default Chatbot;
+*/

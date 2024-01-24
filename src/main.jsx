@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { Route, Routes } from "react-router-dom";
 import "./assets/index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
 import { Backdrop, CircularProgress } from "@mui/material";

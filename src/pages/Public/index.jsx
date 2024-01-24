@@ -3,6 +3,7 @@ import { Layout } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { Landing } from "./Landing";
 
+
 const Public = () => {
   return (
     <Box>
