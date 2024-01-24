@@ -11,6 +11,10 @@ const router = [
     path: "/",
     element: React.lazy(() => import("./pages/Public")),
   },
+  {
+    path: "/chatbot",
+    element: React.lazy(() => import("./pages/Public/chatbot")),
+  },
 ];
 
 ReactDOM.createRoot(document.getElementById("root")).render(
