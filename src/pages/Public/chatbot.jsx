@@ -18,15 +18,63 @@ import React, { useState } from "react";
 import { Button, Navbar, Nav, Form } from 'react-bootstrap';
 
 function Chatbot() {
+  /*se crea una variable de estado llamada messages un array que contendrá los mensajes del chat
+    setMessageses una funcion que lo actualiza. currentMessage representará el mensaje actual que
+    el usuario está escribiendo en el cuadro de texto del chat*/
+    const [messages, setMessages] = useState([
+      { user: "Bot", text: "Hola, ¿en qué puedo ayudarte?" },
+    ]);
+    const [currentMessage, setCurrentMessage] = useState("");
+
+  /**cada vez que se produce un evento de cambio en el cuadro de texto, setCurrentMessage se llama 
+   * con el nuevo valor del cuadro de texto, actualizando así el estado currentMessage con el contenido
+   * del cuadro de texto en tiempo real. */
+
+    const handleInputChange = (e) => {
+        setCurrentMessage(e.target.value);
+    };
+
+    /*const handleSendMessage = () => {
+      if (newUserMessage.trim() !== "") {
+        setMessages([...messages, { user: "User", text: newUserMessage }]);
+        setNewUserMessage("");
+      }
+    };*/
+
+    const handleEnterPress = (e) => {
+      if (e.key === 'Enter' && currentMessage.trim() !== "") {
+          e.preventDefault();
+          setMessages([...messages, { text: currentMessage, fromUser: true }]);
+          setCurrentMessage("");
+      }
+    };
+
     return (
-        <Form className="fixed-bottom mb-3 p-3">
-          <Form.Group className="mb-3">
-            <Form.Control type="text" placeholder="Escriba aqui" />
-          </Form.Group>
-        </Form>
-      );
+      <div>
+      <div className="chat-container">
+          {messages.map((message, index) => (
+              <div key={index} className={message.fromUser ? "user-message" : "bot-message"}>
+                  {message.text}
+              </div>
+          ))}
+      </div>
+      <Form className="fixed-bottom mb-3 p-3">
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Escriba aqui"
+            value={currentMessage}
+            onChange={handleInputChange}
+            onKeyPress={handleEnterPress}
+          />
+        </Form.Group>
+      </Form>
+      </div>
+    );
 }
+
 export default Chatbot;
+
 
 /*function Chatbot() {
   const [messages, setMessages] = useState([
