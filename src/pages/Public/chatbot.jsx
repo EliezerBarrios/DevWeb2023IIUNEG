@@ -65,7 +65,7 @@ function Chatbot() {
             placeholder="Escriba aqui"
             value={currentMessage}
             onChange={handleInputChange}
-            onKeyPress={handleEnterPress}
+            onKeyDown={handleEnterPress}
           />
         </Form.Group>
       </Form>
