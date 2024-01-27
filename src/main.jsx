@@ -5,6 +5,10 @@ import "./assets/index.css";
 import { BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
 import { Backdrop, CircularProgress } from "@mui/material";
+import { Layout } from "./pages/Public/components";
+import { Landing } from "./pages/Public/Landing";
+import { EmailInput } from "./pages/Public/components/Register";
+import { Login } from "./pages/Public/components/Login";
 
 const router = [
   {
@@ -27,13 +31,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         }
       >
         <Routes>
-          {router.map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<route.element />}
-            />
-          ))}
+        <Route path="/" element={<Layout />}>
+          <Route path="" element={<Landing />} />
+          <Route path="registerEmail" element={<EmailInput />}>
+            <Route path=":id" element={<EmailInput />} />
+          </Route>
+        </Route>
+        <Route path="/Login" element={<Login />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

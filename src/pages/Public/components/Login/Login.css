@@ -1,0 +1,109 @@
+form {
+    display: block;
+    margin-top: 70px;
+    background-color: white;
+    width: 90vh;
+    padding: 5vh;
+    border-radius: 20px;
+  }
+
+text {
+    color: #B635D7;
+}
+
+.LoginTitle {
+    color: #B635D7;
+    font-size: 40px;
+}
+
+.textField {
+    width: 100%;
+}
+
+.select {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+button {
+    width: 80%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #B635D7;
+    color: white;
+    border: none;
+}
+
+.forgot {
+    color: #B635D7;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.hint {
+    display: inline-block;
+    background-color: white;
+    width: 90vh;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.container {
+    background: rgb(183, 181, 181);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 30px;
+}
+
+label {
+    display: block;
+  
+  }
+  
+  span {
+    color: tomato;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+.noAcountContainer {
+    padding-top: 10px;
+    height: 90px;
+    width: 100%;
+    border: solid 1px #7C899B;
+    border-radius: 10px;
+}
+
+.noAcount{
+    font-size: 25px;
+    color: #7C899B;
+}
+
+.registerHere {
+    color: #B635D7;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.logoContainer {
+    position: absolute;
+    width: 100%;
+    left: 46%;
+    bottom: 90%;
+}
+
+.toHome {
+    text-decoration: none;
+    color: black;
+}

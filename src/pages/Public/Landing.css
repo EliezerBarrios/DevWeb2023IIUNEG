@@ -1,0 +1,36 @@
+.joinLabel {
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.subJoinLabel {
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.registerButton {
+    display:inline;
+    width: 15%;
+    height: 60px;
+    background-color: #B635D7;
+    color: white;
+    border-color: transparent;
+    border-radius: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    float: left;
+    margin-top: 20px;
+}
+
+.bA {
+    margin-left: 33%;
+}
+
+.bB {
+    margin-left: 4%;
+}
