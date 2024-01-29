@@ -51,24 +51,27 @@ function Chatbot() {
 
     return (
       <div>
-      <div className="chat-container">
-          {messages.map((message, index) => (
-              <div key={index} className={`message ${message.fromUser ? "user-message" : "bot-message"} alert ${message.fromUser ? "alert-primary" : "alert-secondary"}`}>
-                  {message.text}yagregoesto
-              </div>
-          ))}
-      </div>
-      <Form className="fixed-bottom mb-3 p-3">
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="text"
-            placeholder="Escriba aqui"
-            value={currentMessage}
-            onChange={handleInputChange}
-            onKeyDown={handleEnterPress}
-          />
-        </Form.Group>
-      </Form>
+        <div className="chat-container d-flex flex-column">
+            {messages.map((message, index) => (
+                <div key={index} className={`d-flex ${message.fromUser ? "user-message justify-content-end" : "bot-message justify-content-start"} mb-2`}>
+                    <div className={`message alert ${message.fromUser ? "alert-primary p-3 mx-4" : "alert-secondary p-3 mx-4"}`}>
+                      {message.text}
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <Form className="fixed-bottom mb-3 p-3">
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="text"
+              placeholder="Escriba aqui"
+              value={currentMessage}
+              onChange={handleInputChange}
+              onKeyDown={handleEnterPress}
+            />
+          </Form.Group>
+        </Form>
       </div>
     );
 }
