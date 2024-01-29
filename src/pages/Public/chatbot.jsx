@@ -63,7 +63,7 @@ function Chatbot() {
             ))}
         </div>
 
-        <Form className="fixed-bottom mb-3 p-3">
+        <Form className="fixed-bottom mx-5 mb-3 p-3">
           <Form.Group className="mb-3">
             <Form.Control
               type="text"

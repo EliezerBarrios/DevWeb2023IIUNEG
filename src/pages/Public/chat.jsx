@@ -29,16 +29,21 @@ function Chat() {
   
       return (
         <div>
-            <div className="contact-container d-flex flex-column">
-                <ul className="list-group d-flex justify-content-start">
-                    <li className="list-group-item">CONTACTO 1</li>
-                    <li className="list-group-item">CONTACTO 2</li>
-                    <li className="list-group-item">CONTACTO 3</li>
-                    <li className="list-group-item">CONTACTO 4</li>
-                    <li className="list-group-item">CONTACTO 5</li>
-                </ul>
+            <div class="contacts-container">
+                <div class="contacts-header">
+                Contactos
+                </div>
+                <div class="contacts-list">
+                <div class="contact">Contacto 1</div>
+                <div class="contact">Contacto 2</div>
+                <div class="contact">Contacto 3</div>
+                <div class="contact">Contacto 3</div>
+                <div class="contact">Contacto 3</div>
+                <div class="contact">Contacto 3</div>
+                <div class="contact">Contacto 3</div>
+                <div class="contact">Contacto 3</div>
+                </div>
             </div>
-
 
             <div className="chat-container d-flex flex-column">
                 {messages.map((message, index) => (
@@ -50,7 +55,7 @@ function Chat() {
                 ))}
             
 
-                <Form className="fixed-bottom mb-3 p-3">
+                <Form className="fixed-bottom justify-content-center mx-5 mb-3 p-3">
                 <Form.Group className="mb-3">
                     <Form.Control
                     type="text"
