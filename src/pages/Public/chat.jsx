@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Button, Navbar, Nav, Form } from 'react-bootstrap';
+import './Chat.css'
 
 function Chat() {
     /*se crea una variable de estado llamada messages un array que contendrá los mensajes del chat
@@ -42,7 +43,7 @@ function Chat() {
             <div className="chat-container d-flex flex-column">
                 {messages.map((message, index) => (
                     <div key={index} className={`d-flex ${message.fromUser ? "justify-content-end" : "justify-content-start"} mb-2`}>
-                        <div className={`message alert ${message.fromUser ? "alert-primary p-3 mx-4" : "alert-secondary"}`}>
+                        <div className={`message alert ${message.fromUser ? "burbuColoryo p-3 mx-4" : "burbuColorOtro"}`}>
                             {message.text}
                         </div>
                     </div>

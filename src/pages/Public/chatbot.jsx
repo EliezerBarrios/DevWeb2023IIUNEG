@@ -16,6 +16,7 @@ export default Chatbot*/
 
 import React, { useState } from "react";
 import { Button, Navbar, Nav, Form } from 'react-bootstrap';
+import './Chat.css'
 
 function Chatbot() {
   /*se crea una variable de estado llamada messages un array que contendrá los mensajes del chat
@@ -51,10 +52,11 @@ function Chatbot() {
 
     return (
       <div>
+        <h2>Hola, soy Chatbotsito</h2>
         <div className="chat-container d-flex flex-column">
             {messages.map((message, index) => (
                 <div key={index} className={`d-flex ${message.fromUser ? "user-message justify-content-end" : "bot-message justify-content-start"} mb-2`}>
-                    <div className={`message alert ${message.fromUser ? "alert-primary p-3 mx-4" : "alert-secondary p-3 mx-4"}`}>
+                    <div className={`message alert ${message.fromUser ? "burbuColoryo p-3 mx-4" : "burbuColorOtro p-3 mx-4"}`}>
                       {message.text}
                     </div>
                 </div>
