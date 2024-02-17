@@ -1,7 +1,17 @@
 import { Outlet } from "react-router-dom";
 import { Box, AppBar, Toolbar, Typography } from "@mui/material";
+import { useNavigate , Link } from "react-router-dom";
+
+import "./Layout.css"
 
 const Layout = () => {
+
+  const navigate = useNavigate();
+
+  function toLogin() {
+    navigate("login")
+  }
+
   return (
     <Box>
       <Box sx={{ flexGrow: 1 }}>
@@ -13,8 +23,9 @@ const Layout = () => {
               sx={{ flexGrow: 1 }}
               color="#fff"
             >
-              Logo
+              <Link to={"/"} className='toHome'>Logo</Link>
             </Typography>
+            <button className="login" onClick={toLogin}>Iniciar Sesión</button>
           </Toolbar>
         </AppBar>
       </Box>

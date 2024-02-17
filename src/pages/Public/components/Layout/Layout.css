@@ -1,0 +1,11 @@
+.login {
+    background-color: white;
+    display: block;
+    height: 45px;
+    width: 12%;
+    border-radius: 20px;
+    font-weight:850;
+    color: #B635D7;
+    border-color: transparent;
+    font-size: 15px;
+}
