@@ -1,18 +1,15 @@
-import { Box, Typography } from "@mui/material";
-import { useNavigate , Link } from "react-router-dom";
-
-import './Landing.css'
+import { Box, Button, Grid, Typography } from "@mui/material";
+import { useNavigate, Link } from "react-router-dom";
 
 const Landing = () => {
-
   const navigate = useNavigate();
 
   function toCandidate() {
-    navigate("registerEmail/candidato")
+    navigate("registerEmail/candidato");
   }
 
   function toEmpleador() {
-    navigate("registerEmail/empleador")
+    navigate("registerEmail/empleador");
   }
 
   return (
@@ -36,16 +33,47 @@ const Landing = () => {
         <Typography fontSize={16} width={"50%"} color={"#fff"}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
-        <Typography className="joinLabel" fontSize={40} fontWeight={600} width={"50%"} color={"#fff"}>
+      </Box>
+      <Box sx={{ background: "#23354E", p: 6 }}>
+        <Typography
+          variant="h2"
+          fontWeight={600}
+          color={"#fff"}
+          textAlign={"center"}
+        >
           ¡Únete ahora!
         </Typography>
-        <Typography className="subJoinLabel" fontSize={16} fontWeight={600} width={"50%"} color={"#fff"}>
+        <Typography color={"#fff"} textAlign={"center"} mt={2}>
           Registrate como
         </Typography>
-        <div>
-          <button className="registerButton bA" onClick={toCandidate}>Candidato</button>
-          <button className="registerButton bB" onClick={toEmpleador}>Empleador</button>
-        </div>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 5,
+            mt: 4,
+          }}
+        >
+          <Box width={250}>
+            <Button
+              variant="contained"
+              sx={{ p: 4, borderRadius: 5 }}
+              fullWidth
+            >
+              Candidato
+            </Button>
+          </Box>
+          <Box width={250}>
+            <Button
+              variant="contained"
+              sx={{ p: 4, borderRadius: 5 }}
+              fullWidth
+            >
+              Empleado
+            </Button>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
