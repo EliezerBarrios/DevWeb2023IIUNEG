@@ -2,7 +2,8 @@ import { Box } from "@mui/material";
 import { Layout } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { Landing } from "./Landing";
-import { EmailInput } from "./components/EmailInput/EmailInput";
+import { Login } from "./Login";
+import { EmailInput } from "./Register";
 
 const Public = () => {
   return (
@@ -10,10 +11,12 @@ const Public = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Landing />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<EmailInput />} />
         </Route>
       </Routes>
     </Box>
   );
 };
 
-export default Public;
+export { Public };
