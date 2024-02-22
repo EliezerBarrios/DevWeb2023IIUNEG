@@ -3,23 +3,23 @@ const router = express.Router()
 const controller = require('../controllers/index.controller')
 
 
-router.get('/usuario', ver )
+router.post('/insertarUsuario',function(res,req,next){
+    controller.insertar()
+    next
+})
 
-router.post('/insertarUsuario',insertar)
+router.get('/usuario', function(req, res, next){
+    controller.ver()
+    next
+})
 
-router.post('/editarUsuario', editar)
+//router.post('/editarUsuario', editar)
 
-router.post('/eliminarUsuario', eliminar)
+router.post('/eliminarUsuario', function(res, req, next){
+    controller.borrar()
+    next
 
-
-
-
-
-
-/*const { getUser } = require ('../controllers/index.js');
-
-router.get('/users', getUser);*/
-
+})
 
 module.exports = router
 
