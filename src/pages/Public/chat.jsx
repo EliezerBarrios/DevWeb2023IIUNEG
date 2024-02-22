@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Button, Navbar, Nav, Form } from 'react-bootstrap';
-import './Chat.css'
+import './chat.css'
 
 function Chat() {
     /*se crea una variable de estado llamada messages un array que contendrá los mensajes del chat
