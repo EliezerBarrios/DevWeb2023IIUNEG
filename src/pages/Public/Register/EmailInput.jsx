@@ -21,17 +21,13 @@ const EmailInput = () => {
     
         if(errors.email || errors.password || errors.confirmPassword){
             console.log(errors)
-        }else if (data.password != data.confirmPassword){
-            console.log("contraseñas no iguales")
-
-            if(!diferentPasswords){
-                setSpan(diferentPasswords => !diferentPasswords)
-            }
-            
-        }
-        else {
+        }else {
             reset()
-            navigate('/inputInfo')
+            if(id == "empleador"){
+                navigate('/registerCompanyData')
+            }else{
+                navigate('/registerApplicantData')
+            }
         }
     })
 
