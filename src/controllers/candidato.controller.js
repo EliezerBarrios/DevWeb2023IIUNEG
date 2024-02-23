@@ -6,11 +6,14 @@ const controller = {};
 module.exports = {
     
   const : insertar = async() => {
-    const result = 'INSERT INTO candidato(idcandidato, id, codexp, codedu, nombre, apellido, usuario, contrasena, fechanacimiento, email, nacionalidad, foto) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)'
-    const valores= []
-
+     if (id == idcandidato){
+    const result = 'INSERT INTO candidato(idcandidato, codexp, codedu, usuario, contrasena, foto) VALUES ($1,$2,$3,$4,$5,$6)'
+    const valores= [1380,13801, 13801, 'carloscarrillos', 'carlosc123', 'carlosc.jgp']
+    
     const res = await pool.query(result,valores)
     console.log(res.rows)
+    console.log('insercion exitosa')
+    }
    
   },
 
@@ -22,7 +25,7 @@ module.exports = {
    
 
     /*const : editar = async() => {
-    const result = 'update usuario set nombre= 'manuel', apellido= 'montenegro' where id=1380;'
+    const result = 'update candidato set usuario= $4, contrasena= $5 where id=$1;'
     
     const res = await pool.query(result)
     console.log(res.rows)
