@@ -45,7 +45,7 @@ function Chatbot() {
       handleBotResponse(currentMessage);
     }
   };
-
+//aqui se generan las respuestas del bot
   const handleBotResponse = (userMessage) => {
     let botResponse = "";
 
@@ -60,6 +60,13 @@ function Chatbot() {
     // Condición para manejar agradecimientos
     else if (userMessage.toLowerCase().includes("gracias") || userMessage.toLowerCase().includes("bye") || userMessage.toLowerCase().includes("hasta luego")) {
       botResponse = "¡No hay porque! ¿Hay algo mas en lo que te pueda ayudar?";
+    }
+    //si el usuario olvido su contraseña
+    else if ((userMessage.toLowerCase().includes("olvide")||userMessage.toLowerCase().includes("perdi")) && userMessage.toLowerCase().includes("contraseña")) {
+      botResponse = "Bueno, no puedo decirte tu contraseña porque ni yo la se, pero pedo enviarte un correo con un enlace para que puedas crear una nueva";
+    }
+    else if ((userMessage.toLowerCase().includes("@") && userMessage.toLowerCase().includes(".com"))||userMessage.toLowerCase().includes("correo")) {
+      botResponse = "Ok, revisa tu correo ya debio de llegar un enlace";
     }
     // Condición por defecto
     else {
