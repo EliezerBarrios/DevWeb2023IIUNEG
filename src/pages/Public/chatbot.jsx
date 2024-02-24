@@ -47,7 +47,25 @@ function Chatbot() {
   };
 
   const handleBotResponse = (userMessage) => {
-    const botResponse = generateBotResponse(userMessage);
+    let botResponse = "";
+
+    // Condición para manejar saludos
+    if (userMessage.toLowerCase().includes("hola") || userMessage.toLowerCase().includes("hi")) {
+      botResponse = "¡Hola! ¿Cómo puedo ayudarte?";
+    }
+    // Condición para manejar despedidas
+    else if (userMessage.toLowerCase().includes("adios") || userMessage.toLowerCase().includes("adiós") || userMessage.toLowerCase().includes("bye") || userMessage.toLowerCase().includes("hasta luego")) {
+      botResponse = "¡Hasta luego! Si tienes más preguntas, estoy aquí.";
+    }
+    // Condición para manejar agradecimientos
+    else if (userMessage.toLowerCase().includes("gracias") || userMessage.toLowerCase().includes("bye") || userMessage.toLowerCase().includes("hasta luego")) {
+      botResponse = "¡No hay porque! ¿Hay algo mas en lo que te pueda ayudar?";
+    }
+    // Condición por defecto
+    else {
+      botResponse = generateBotResponse(userMessage);
+    }
+
     const newBotMessage = { user: "Bot", text: botResponse };
     updateMessages(newBotMessage);
   };
