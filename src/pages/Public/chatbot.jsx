@@ -68,6 +68,10 @@ function Chatbot() {
     else if ((userMessage.toLowerCase().includes("@") && userMessage.toLowerCase().includes(".com"))||userMessage.toLowerCase().includes("correo")) {
       botResponse = "Ok, revisa tu correo ya debio de llegar un enlace";
     }
+    //si ocurrio una estafa o engaño
+    else if (userMessage.toLowerCase().includes("estafado") || userMessage.toLowerCase().includes("estafa") || userMessage.toLowerCase().includes("engaño")|| userMessage.toLowerCase().includes("engañaron")) {
+      botResponse = "¡Eso es terrible! mira, estos casos se deben enviar al siguiente email para que nuestros asesores puedan gestionar tu caso: unadireccion@botmail.com";
+    }
     // Condición por defecto
     else {
       botResponse = generateBotResponse(userMessage);
@@ -78,7 +82,7 @@ function Chatbot() {
   };
 
   const generateBotResponse = (userMessage) => {
-    return `Gracias por tu pregunta: "${userMessage}". Aún estoy aprendiendo a responder a preguntas más complejas.`;
+    return `Disculpa no entiendo: "${userMessage}". Aún estoy aprendiendo a responder a preguntas más complejas.`;
   };
 
   const updateMessages = (newMessage) => {
