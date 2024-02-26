@@ -20,6 +20,10 @@ const router = [
     path: "/chat",
     element: React.lazy(() => import("./pages/Public/chat")),
   },
+  {
+    path: "/ofertas",
+    element: React.lazy(() => import("./pages/Public/ofertas")),
+  },
 ];
 
 ReactDOM.createRoot(document.getElementById("root")).render(
