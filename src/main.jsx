@@ -15,8 +15,8 @@ const router = [
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      {router.map((item) => (
-        <Route path={item.path} element={item.element()} />
+      {router.map((item, index) => (
+        <Route path={item.path} element={item.element()} key={index} />
       ))}
     </Routes>
   </BrowserRouter>
