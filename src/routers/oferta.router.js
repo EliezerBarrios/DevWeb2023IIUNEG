@@ -1,24 +1,24 @@
 const express = require('express')
-const router = express.Router()
+const routerOferta = express.Router()
 const controller = require('../controllers/oferta.controller')
 
 
-router.post('/insertarOferta',function(res,req,next){
+routerOferta.post('/insertarOferta',function(res,req,next){
     controller.insertar()
     next
 })
 
-router.get('/Oferta', function(req, res, next){
+routerOferta.get('/Oferta', function(req, res, next){
     controller.ver()
     next
 })
 
-//router.post('/editarOferta', editar)
+//routerOferta.patch('/editarOferta', editar)
 
-router.post('/eliminarOferta', function(res, req, next){
+routerOferta.delete('/eliminarOferta', function(res, req, next){
     controller.borrar()
     next
 
 })
 
-module.exports = router
+module.exports = routerOferta

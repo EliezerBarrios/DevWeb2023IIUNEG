@@ -1,24 +1,24 @@
 const express = require('express')
-const router = express.Router()
+const routerEmpresa = express.Router()
 const controller = require('../controllers/empresa.controller')
 
 
-router.post('/insertarempresa',function(res,req,next){
+routerEmpresa.post('/insertarempresa',function(res,req,next){
     controller.insertar()
     next
 })
 
-router.get('/empresa', function(req, res, next){
+routerEmpresa.get('/empresa', function(req, res, next){
     controller.ver()
     next
 })
 
-//router.post('/editarEmpresa', editar)
+//routerEmpresa.patch('/editarEmpresa', editar)
 
-router.post('/eliminarEmpresa', function(res, req, next){
+routerEmpresa.delete('/eliminarEmpresa', function(res, req, next){
     controller.borrar()
     next
 
 })
 
-module.exports = router
+module.exports = routerEmpresa

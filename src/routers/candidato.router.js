@@ -1,24 +1,48 @@
 const express = require('express')
-const router = express.Router()
+const routerCandidato = express.Router()
 const controller = require('../controllers/candidato.controller')
+const bodyParser = require('body-parser')
 
 
-router.post('/insertarcandidato',function(res,req,next){
+const app = express()
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+
+routerCandidato.post('/candidato',function(res,req){
     controller.insertar()
-    next
 })
 
-router.get('/candidato', function(req, res, next){
+routerCandidato.get('/candidato', function(req, res){
     controller.ver()
-    next
+   
 })
 
-//router.post('/editarUsuario', editar)
+routerCandidato.post('/autenticacion', function(res, req){
 
-router.post('/eliminarCandidato', function(res, req, next){
+    const {usuario, contraseña} = req.body
+    
+    
+
+    var verificar = controller.autenticacion(usuario, contraseña)
+
+    if (verificar === false){
+        return res.sendStatus(401).send (' datos no coinciden')
+    }
+
+    res.send(usuario,contraseña)
+    console.log(res)
+    console.log(req)
+
+   
+})
+
+//routerCandidato.patch('/editarUsuario', editar)
+
+routerCandidato.delete('/candidato', function(res, req){
     controller.borrar()
-    next
 
 })
 
-module.exports = router
+module.exports = routerCandidato

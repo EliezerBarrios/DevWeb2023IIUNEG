@@ -51,11 +51,6 @@ CREATE TABLE public.administrador (
     id integer,
     usuarioadmin character varying(30),
     contrasenaadmin character varying(30),
-    nombre character varying(50),
-    apellido character varying(50),
-    fechanacimiento date,
-    email character varying(50),
-    nacionalidad character varying(50),
     privilegios character varying(50),
     foto bytea
 );
@@ -73,13 +68,8 @@ CREATE TABLE public.candidato (
     id integer,
     codexp integer,
     codedu integer,
-    nombre character varying(50),
-    apellido character varying(50),
     usuario character varying(30),
     contrasena character varying(30),
-    fechanacimiento date,
-    email character varying(50),
-    nacionalidad character varying(50),
     foto bytea
 );
 
@@ -146,14 +136,9 @@ ALTER TABLE public.oferta OWNER TO postgres;
 CREATE TABLE public.reclutador (
     idreclu integer NOT NULL,
     id integer,
-    nombre character varying(50),
-    apellido character varying(50),
     usuarioemp character varying(30),
     contrasenaemp character varying(30),
     cargoasoc character varying(50),
-    fechanacimiento date,
-    email character varying(50),
-    nacionalidad character varying(50),
     foto bytea
 );
 
@@ -200,7 +185,7 @@ ALTER TABLE public.usuario OWNER TO postgres;
 -- Data for Name: administrador; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.administrador (codadmin, id, usuarioadmin, contrasenaadmin, nombre, apellido, fechanacimiento, email, nacionalidad, privilegios, foto) FROM stdin;
+COPY public.administrador (codadmin, id, usuarioadmin, contrasenaadmin, privilegios, foto) FROM stdin;
 \.
 
 
@@ -210,7 +195,7 @@ COPY public.administrador (codadmin, id, usuarioadmin, contrasenaadmin, nombre, 
 -- Data for Name: candidato; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.candidato (idcandidato, id, codexp, codedu, nombre, apellido, usuario, contrasena, fechanacimiento, email, nacionalidad, foto) FROM stdin;
+COPY public.candidato (idcandidato, id, codexp, codedu, usuario, contrasena, foto) FROM stdin;
 \.
 
 
@@ -250,7 +235,7 @@ COPY public.oferta (codofer, titulo, descripcion, habilidad, rangosalarial, moda
 -- Data for Name: reclutador; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.reclutador (idreclu, id, nombre, apellido, usuarioemp, contrasenaemp, cargoasoc, fechanacimiento, email, nacionalidad, foto) FROM stdin;
+COPY public.reclutador (idreclu, id, usuarioemp, contrasenaemp, cargoasoc, foto) FROM stdin;
 \.
 
 

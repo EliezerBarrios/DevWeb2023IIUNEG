@@ -13,9 +13,9 @@ router.get('/usuario', function(req, res, next){
     next
 })
 
-//router.post('/editarUsuario', editar)
+//router.patch('/editarUsuario', editar)
 
-router.post('/eliminarUsuario', function(res, req, next){
+router.delete('/eliminarUsuario', function(res, req, next){
     controller.borrar()
     next
 

@@ -1,24 +1,24 @@
 const express = require('express')
-const router = express.Router()
+const routerExteriencia = express.Router()
 const controller = require('../controllers/experiencia.controller')
 
 
-router.post('/insertarExperiencia',function(res,req,next){
+routerExteriencia.post('/insertarExperiencia',function(res,req,next){
     controller.insertar()
     next
 })
 
-router.get('/experiencia', function(req, res, next){
+routerExteriencia.get('/experiencia', function(req, res, next){
     controller.ver()
     next
 })
 
-//router.post('/editarExperiencia', editar)
+//routerExteriencia.patch('/editarExperiencia', editar)
 
-router.post('/eliminarExperiencia', function(res, req, next){
+routerExteriencia.delete('/eliminarExperiencia', function(res, req, next){
     controller.borrar()
     next
 
 })
 
-module.exports = router
+module.exports = routerExteriencia
