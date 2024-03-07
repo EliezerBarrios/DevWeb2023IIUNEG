@@ -60,6 +60,7 @@ const Landing = () => {
               variant="contained"
               sx={{ p: 4, borderRadius: 5 }}
               fullWidth
+              onClick={() => navigate("/registerEmail/candidato")}
             >
               Candidato
             </Button>
@@ -69,6 +70,7 @@ const Landing = () => {
               variant="contained"
               sx={{ p: 4, borderRadius: 5 }}
               fullWidth
+              onClick={() => navigate("/registerEmail/empleador")}
             >
               Empleado
             </Button>
