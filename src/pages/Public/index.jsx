@@ -8,6 +8,9 @@ import Chat from "./chat";
 import Ofertas from "./ofertas";
 import { CompanyInfoRegister, EmailInput, UserInfoRegister } from "./Register";
 
+import { EmailInput } from "./Register";
+import Profile from "./Profile/Profile";
+
 const Public = () => {
   return (
     <Box>
@@ -27,6 +30,7 @@ const Public = () => {
           />
           <Route path="/registerApplicantData" element={<UserInfoRegister />} />
         </Route>
+        <Route path="profile" element={<Profile />} />
       </Routes>
     </Box>
   );
