@@ -13,18 +13,18 @@ const router = [
     path: "/*",
     element: Public,
   },
-  {
-    path: "/chatbot",
-    element: React.lazy(() => import("./pages/Public/chatbot")),
-  },
-  {
-    path: "/chat",
-    element: React.lazy(() => import("./pages/Public/chat")),
-  },
-  {
-    path: "/ofertas",
-    element: React.lazy(() => import("./pages/Public/ofertas")),
-  },
+  // {
+  //   path: "/chatbot",
+  //   element: React.lazy(() => import("./pages/Public/chatbot")),
+  // },
+  // {
+  //   path: "/chat",
+  //   element: React.lazy(() => import("./pages/Public/chat")),
+  // },
+  // {
+  //   path: "/ofertas",
+  //   element: React.lazy(() => import("./pages/Public/ofertas")),
+  // },
 ];
 
 ReactDOM.createRoot(document.getElementById("root")).render(
