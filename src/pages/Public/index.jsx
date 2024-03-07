@@ -5,6 +5,7 @@ import { Landing } from "./Landing";
 import { Login } from "./Login";
 import { EmailInput } from "./Register";
 
+
 const Public = () => {
   return (
     <Box>
