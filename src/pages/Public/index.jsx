@@ -7,8 +7,6 @@ import Chatbot from "./chatbot";
 import Chat from "./chat";
 import Ofertas from "./ofertas";
 import { CompanyInfoRegister, EmailInput, UserInfoRegister } from "./Register";
-
-import { EmailInput } from "./Register";
 import Profile from "./Profile/Profile";
 
 const Public = () => {
@@ -21,6 +19,7 @@ const Public = () => {
           <Route path="chatbot" element={<Chatbot />} />
           <Route path="chat" element={<Chat />} />
           <Route path="ofertas" element={<Ofertas />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="registerEmail">
             <Route path=":id" element={<EmailInput />} />
           </Route>
