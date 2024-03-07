@@ -1,18 +1,17 @@
 form {
-    display: block;
+    display:flexbox;
     background-color: white;
     width: 90vh;
     padding: 5vh;
     border-radius: 20px;
-  }
+}
 
 text {
     color: #B635D7;
 }
 
-.emailInputTitle {
+h1 {
     color: #B635D7;
-    font-size: 40px;
 }
 
 .textField {
@@ -25,7 +24,7 @@ text {
     width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: inline-block;
+    display:inline;
 }
 
 button {
@@ -55,47 +54,6 @@ button {
     text-align: center;
 }
 
-.container {
-    background: rgb(183, 181, 181);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-size: 30px;
-}
-
-label {
-    display: block;
-  
-  }
-  
-  span {
-    color: tomato;
-    display: block;
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-align: left;
-  }
-
-  .subtitle {
-    display:inline;
-    font-size: 15px;
-  }
-
-  .icons {
-    display:inline;
-    font-size: 15px;
-    background-color: #B635D7;
-    border-radius: 10px;
-    
-  }
-
-.tab {
-  display: inline;
-  border-top: 1px solid black;
-  height: 2px;
-  min-width: 20px;
-  max-width: 20px;
-  padding: 0;
-  margin: 20px auto 0 auto;
+.selectContainer {
+    display: flex;
 }
